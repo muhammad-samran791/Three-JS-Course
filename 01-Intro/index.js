@@ -2,8 +2,9 @@ const scene = new THREE.Scene();
 
 const geometry = new THREE.BoxGeometry(20, 20, 20);
 const material = new THREE.MeshBasicMaterial({ color: "red" });
-const box = new THREE.Mesh(geometry, material);
-scene.add(box);
+
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
 
 const size = {
   width: 700,
@@ -11,7 +12,7 @@ const size = {
 };
 
 const camera = new THREE.PerspectiveCamera(75, size.width / size.height);
-camera.position.z = 50;
+camera.position.z = 40;
 camera.position.x = 20;
 scene.add(camera);
 
